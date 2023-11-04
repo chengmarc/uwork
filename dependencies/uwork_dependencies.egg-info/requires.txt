@@ -1,0 +1,4 @@
+tk==0.1.0
+customtkinter
+pyautogui
+colorama==0.4.6
