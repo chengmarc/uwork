@@ -59,7 +59,9 @@ def word():
             while should_run:            
                 ulib.ui.write(batch[count], interval=0.01)
                 count += 1
-                
+                if count == len(batch):
+                    count = 0
+                    
             iteration += 1
             
         except KeyboardInterrupt:
