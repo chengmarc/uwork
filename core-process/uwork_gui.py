@@ -54,7 +54,7 @@ font_instr = ("Segoe UI", 14)
 
 # %% Initialize Window
 root = tk.CTk()
-root.title("UWork v1.0")
+root.title("UWork v1.01")
 root.iconbitmap("uwork_icon.ico")
 root.resizable(width=False, height=False)
 
