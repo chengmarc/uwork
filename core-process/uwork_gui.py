@@ -18,8 +18,8 @@ from uwork_functions import alt_tab, excel, word
 def thread1():
     process = td.Thread(target=alt_tab)
     process.start()
-    
-    
+
+
 def thread2():
     process = td.Thread(target=excel)
     process.start()
@@ -28,8 +28,8 @@ def thread2():
 def thread3():
     process = td.Thread(target=word)
     process.start()
-    
-    
+
+
 def stop():
     process = td.Thread(target=stop_execution)
     process.start()
@@ -37,7 +37,7 @@ def stop():
 
 def exit():
     root.destroy()
-    sys.exit()    
+    sys.exit()
 
 
 # %% Set Window Appeareance and Fonts
@@ -51,18 +51,15 @@ tk.set_default_color_theme("blue")
 font_intro = ("Segoe UI Black", 18)
 font_instr = ("Segoe UI", 14)
 
-    
+
 # %% Initialize Window
 root = tk.CTk()
 root.title("UWork v1.0")
-root.geometry("800x600")
 root.iconbitmap("uwork_icon.ico")
+root.resizable(width=False, height=False)
 
-root.grid_rowconfigure(0, weight=1)
-root.grid_columnconfigure(0, weight=1)
-
-window = tk.CTkFrame(root)    
-window.grid(row=0, column=0, sticky="")
+window = tk.CTkFrame(root)
+window.grid(padx=40, pady=40)
 
 
 # %% Frame 1
@@ -79,25 +76,25 @@ def frame1_intro():
     
     intro1.grid(row=0, padx=20, pady=4, sticky="nswe")
     intro2.grid(row=1, padx=20, pady=4, sticky="nswe")
-    
 
-def frame1_instruction():    
+
+def frame1_instruction():
     instr1 = "1. Switch to English keyboard before starting."
     instr2 = "2. Close MS Word and MS Excel prior to execution."
-    instr3 = "3. Click the Stop button or move you mouse to screen corners to stop."
+    instr3 = "3. Move you mouse to screen corners to stop."
 
     text1 = tk.CTkLabel(frame1, anchor="w", text=instr1, font=font_instr)
     text2 = tk.CTkLabel(frame1, anchor="w", text=instr2, font=font_instr)
     text3 = tk.CTkLabel(frame1, anchor="w", text=instr3, font=font_instr)
-    
+
     text1.grid(row=2, padx=20, pady=3, sticky="nswe")
     text2.grid(row=3, padx=20, pady=3, sticky="nswe")
     text3.grid(row=4, padx=20, pady=3, sticky="nswe")
-    
+
 
 frame1_intro()
 frame1_instruction()
-    
+
 
 # %% Frame 2
 frame2 = tk.CTkFrame(window)
