@@ -5,7 +5,7 @@
 Go to **Releases** on the right of this page, and download the **.exe** file. That's it.
 
 ***IMPORTANT:*** Make sure you have a English keyboard, close MS Word and MS Excel !!! \
-***IMPORTANT:*** Move your mouse to screen corners to stop \
+***IMPORTANT:*** Move your mouse to screen corners to stop.
 
 If you have Python installed, you can also:
 1. Download this repository as a **.zip** file and extract it.
