@@ -1,0 +1,2 @@
+pyinstaller --distpath .\distribution --workpath .\distribution --onefile --noconsole --name UWork --collect-all customtkinter --add-data "uwork_icon.ico;." --icon=uwork_icon.ico uwork_lite_gui.py
+pause
